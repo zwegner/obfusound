@@ -1,0 +1,11 @@
+loop 31			;Loop for 31 iterations
+ set b,r		;Set reg b to the loop counter
+ mul b,2		;We want to store in groups of 2
+ set a,42		;Constant, note length
+ store b		;Store 127 in memory[b]
+ add b,1		;Move to the next memory cell
+ set a,b		;Store the loop counter in a reg for the store
+ rand			;Get a random number
+ add a,a		;Add the number to the loop counter
+ store b		;Move the counter into memory, indicating pitch
+end				;End of loop 
